@@ -41,7 +41,7 @@ defmodule Mongo.Cursor.Test do
 
     Mongo.Collection.drop anycoll
 
-    items = 1..110 |> Enum.map fn r -> %{a: r, value: r} end
+    items = 1..110 |> Enum.map(fn r -> %{a: r, value: r} end)
 
     Mongo.Collection.insert(items, anycoll)
 
